@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "1",
+    "companyOfProvider": "Accenture",
+    "documents": "000.000.000-01",
+    "state": "São Paulo"
+  },
+  {
+    "_id": "2",
+    "companyOfProvider": "Accenture",
+    "documents": "000.000.000-01",
+    "state": "São Paulo"
+  },
+  {
+    "_id": "3",
+    "companyOfProvider": "Accenture",
+    "documents": "000.000.000-01",
+    "state": "São Paulo"
+  }
+]
