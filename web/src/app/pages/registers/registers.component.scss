@@ -1,0 +1,38 @@
+.mat-elevation-z8 {
+  max-width: 100rem;
+  margin: 5rem auto;
+
+  .content-register {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+
+    h3 {
+      color: #313650;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .register-create {
+      background-color: #5f0096;
+      color: #fff;
+      padding: 1rem 1.3rem;
+      text-decoration: none;
+      border-radius: 0.4rem;
+      font-size: 1rem;
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+}
+
+.loading-spinner {
+  padding: 2rem;
+  background: rgba(157, 154, 154, 0.299);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
