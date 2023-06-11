@@ -24,6 +24,7 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Spring]() <!--Link do spring  -->
+  - [H2](https://www.h2database.com/html/quickstart.html) -> É um banco de dados em memória
 - [Angular]() <!-- Link do angular -->
 
 ## 🔖 Layout
