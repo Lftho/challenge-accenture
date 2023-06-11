@@ -9,7 +9,7 @@ import { delay, first, tap } from 'rxjs/operators'
 })
 export class RegistersService {
 
-  private readonly API = '/assets/register.json';
+  private readonly API = 'api/company';
 
   constructor(private httpClient: HttpClient) { }
 
