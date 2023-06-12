@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 // import { MatPaginator } from '@angular/material/paginator';
 // import { MatTableDataSource } from '@angular/material/tlable';
-import { Register } from './model/registers/register';
 import { RegistersService } from 'src/app/shared/services/registers.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Register } from 'src/app/shared/model/registers/register';
+
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { MatSnackBar } from '@angular/material/snack-bar';
-
 
 @Component({
   selector: 'app-registers',
@@ -18,11 +19,13 @@ export class RegistersComponent implements OnInit {
   // dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   public registers$: Observable<Register[]>;
-  public displayedColumns: string[] = ['_id', 'companyOfProvider', 'documents', 'state'];
+  public displayedColumns: string[] = ['cnpjOfCpf', 'name', 'cep', 'actions'];
 
   constructor(
     private registersService: RegistersService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private router: Router,
+    private route: ActivatedRoute
   ) {
     this.registers$ = this.registersService.listAll()
       .pipe(
@@ -40,5 +43,10 @@ export class RegistersComponent implements OnInit {
     this.snackBar.open(ErrorMsg, 'fechar', {
       duration: 3000,
     });
+  }
+
+  onAdd() {
+    /** Referencia do novo registro para lista do registros */
+    this.router.navigate(['new'], { relativeTo: this.route });
   }
 }
