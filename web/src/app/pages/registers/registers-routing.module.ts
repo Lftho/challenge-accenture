@@ -5,7 +5,17 @@ import { RegistersComponent } from './registers.component';
 const routes: Routes = [
   {
     path: '',
-    component: RegistersComponent
+    component: RegistersComponent,
+  },
+  {
+    path: '',
+    children: [
+      {
+        path: 'new',
+        loadChildren: () => import('./register-form/register-form.module')
+          .then(m => m.RegisterFormModule)
+      }
+    ]
   }
 ];
 
