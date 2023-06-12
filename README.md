@@ -23,9 +23,10 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [Spring]() <!--Link do spring  -->
-  - [H2](https://www.h2database.com/html/quickstart.html) -> É um banco de dados em memória
-- [Angular]() <!-- Link do angular -->
+- [Spring](https://spring.io/) <!--Link do spring  -->
+  Banco de dados utilizado - [H2](https://www.h2database.com/html/quickstart.html)
+
+- [Angular](https://angular.io) <!-- Link do angular -->
 
 ## 🔖 Layout
 
@@ -49,5 +50,19 @@ i. Pode adicionar novas colunas, classes, heranças, entidades de relacionamento
 demais recursos que julgar necessário<br />
 j. Teste de unidade (opcional)<br />
 k. Implementar Dockerfile (opcional)<br />
+
+## Configuração
+
+git remote add origin https://github.com/Lftho/challenge-accenture.git
+cd challenge-accenture
+
+Frontend, acessa a pasta web `cd web`
+
+- npm install
+- npm start
+
+Backend, acessa a pasta backend = (necessário fazer algumas configurações)
+
+- Segue um video de como configurar [Configuração](https://www.youtube.com/watch?v=Ge7Em4byou8&list=PLGxZ4Rq3BOBpwaVgAPxTxhdX_TfSVlTcY&index=13&pp=iAQB)
 
 Feito com ♥ by Luiz Fernando Thomaz
