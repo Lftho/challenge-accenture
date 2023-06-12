@@ -53,8 +53,8 @@ k. Implementar Dockerfile (opcional)<br />
 
 ## Configuração
 
-git remote add origin https://github.com/Lftho/challenge-accenture.git
-cd challenge-accenture
+git remote add origin https://github.com/Lftho/challenge-accenture.git <br />
+`cd challenge-accenture`
 
 Frontend, acessa a pasta web `cd web`
 
