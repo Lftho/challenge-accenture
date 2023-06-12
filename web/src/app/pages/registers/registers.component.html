@@ -2,35 +2,45 @@
   <div class="mat-elevation-z8">
     <section class="content-register">
       <h3>Registros</h3>
-      <a class="register-create" href="#">novo registro</a>
+      <!-- <a class="register-create" href="#">novo registro</a> -->
+      <button mat-mini-fab color="accent" aria-label="Adiciona uma empresa ou fornecedor">
+        <mat-icon (click)="onAdd()">add</mat-icon>
+      </button>
     </section>
 
     <div *ngIf="registers$ | async as registers; else loading">
       <table mat-table [dataSource]="registers">
         <!-- ID Column -->
-        <ng-container matColumnDef="_id">
-          <th mat-header-cell *matHeaderCellDef> ID </th>
-          <td mat-cell *matCellDef="let register"> {{register._id}} </td>
+        <ng-container matColumnDef="cnpjOfCpf">
+          <th mat-header-cell *matHeaderCellDef> CNPJ/CPF </th>
+          <td mat-cell *matCellDef="let register"> {{register.cnpjOfCpf}} </td>
         </ng-container>
 
         <!-- CompanyOfProvider Column -->
-        <ng-container matColumnDef="companyOfProvider">
-          <th mat-header-cell *matHeaderCellDef> Company/Provider </th>
-          <td mat-cell *matCellDef="let register"> {{register.companyOfProvider}} </td>
-        </ng-container>
-
-        <!-- Documents Column -->
-        <ng-container matColumnDef="documents">
-          <th mat-header-cell *matHeaderCellDef> Documents </th>
-          <td mat-cell *matCellDef="let register"> {{register.documents}} </td>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Nome </th>
+          <td mat-cell *matCellDef="let register"> {{register.name}} </td>
         </ng-container>
 
         <!-- State Column -->
-        <ng-container matColumnDef="state">
-          <th mat-header-cell *matHeaderCellDef> State </th>
-          <td mat-cell *matCellDef="let register"> {{register.state}} </td>
+        <ng-container matColumnDef="cep">
+          <th mat-header-cell *matHeaderCellDef> CEP </th>
+          <td mat-cell *matCellDef="let register"> {{register.cep}} </td>
         </ng-container>
 
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Ações </th>
+          <mat-cell *matCellDef="let register">
+            <button mat-icon-button color="primary" aria-label="Editar uma empresa ou fornecedor">
+              <mat-icon>edit</mat-icon>
+            </button>
+
+            <button mat-icon-button color="warn" aria-label="Remover uma empresa ou fornecedor">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-cell>
+        </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
