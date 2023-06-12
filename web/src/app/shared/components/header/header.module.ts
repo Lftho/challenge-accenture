@@ -4,10 +4,10 @@ import { CommonModule } from '@angular/common';
 import { HeaderRoutingModule } from './header-routing.module';
 import { HeaderComponent } from './header.component';
 
-//MATERIALMODULE
+//MAT_MODULE
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-const MaterialModule = [
+const MAT_MODULE = [
   MatToolbarModule
 ]
 
@@ -18,7 +18,7 @@ const MaterialModule = [
   imports: [
     CommonModule,
     HeaderRoutingModule,
-    ...MaterialModule
+    ...MAT_MODULE
   ],
   exports: [
     HeaderComponent
