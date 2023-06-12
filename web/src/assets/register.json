@@ -1,20 +1,20 @@
 [
   {
-    "_id": "1",
-    "companyOfProvider": "Accenture",
-    "documents": "000.000.000-01",
-    "state": "São Paulo"
+    "validate": "Empresa",
+    "cnpjOfCpf": "55.586.474/0001-59",
+    "cep": "05144-089",
+    "name": "Max"
   },
   {
-    "_id": "2",
-    "companyOfProvider": "Accenture",
-    "documents": "000.000.000-01",
-    "state": "São Paulo"
+    "validate": "fornecedorPF",
+    "cnpjOfCpf": "000.000.000-01",
+    "name": "Gabi Gol",
+    "cep": "05144-089"
   },
   {
-    "_id": "3",
-    "companyOfProvider": "Accenture",
-    "documents": "000.000.000-01",
-    "state": "São Paulo"
+    "validate": "fornecedorPJ",
+    "cnpjOfCpf": "55.586.876/0001-59",
+    "name": "Arena Volei",
+    "cep": "05144-089"
   }
 ]
