@@ -6,15 +6,19 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 import { RegistersRoutingModule } from './registers-routing.module';
 import { RegistersComponent } from './registers.component';
 
-const MaterialModule = [
+const MAT_MODULE = [
   MatTableModule,
   MatCardModule,
   MatProgressSpinnerModule,
-  MatDialogModule
+  MatDialogModule,
+  MatButtonModule,
+  MatIconModule
 ];
 
 @NgModule({
@@ -24,7 +28,7 @@ const MaterialModule = [
   imports: [
     CommonModule,
     RegistersRoutingModule,
-    ...MaterialModule,
+    ...MAT_MODULE,
     MatSnackBarModule
   ],
   exports: [
