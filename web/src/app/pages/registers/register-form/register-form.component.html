@@ -1,0 +1,39 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Cadastro</mat-card-title>
+  </mat-card-header>
+  <form [formGroup]="form">
+    <mat-card-content>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Selecione</mat-label>
+        <mat-select formControlName="validate">
+          <mat-option value="null"></mat-option>
+          <mat-option value="Empresa">Empresa</mat-option>
+          <mat-option value="FornecedorPF">Fornecedor PF</mat-option>
+          <mat-option value="FornecedorPJ">Fornecedor PJ</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>CNPJ/CPF</mat-label>
+        <input matInput placeholder="CNPJ/CPF" formControlName="cnpjOfCpf">
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Informe o nome" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field class="full-width" appearance="outline">
+        <mat-label>CEP</mat-label>
+        <input matInput placeholder="Informe o CEP" formControlName="cep">
+      </mat-form-field>
+    </mat-card-content>
+  </form>
+  <mat-card-actions>
+    <button (click)="onSubmit()">Salvar</button>
+    <button mat-button (click)="onCancel()">Cancelar</button>
+  </mat-card-actions>
+</mat-card>
