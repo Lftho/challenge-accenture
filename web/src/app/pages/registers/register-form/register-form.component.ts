@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { Location } from '@angular/common';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { RegistersService } from 'src/app/shared/services/registers.service';
@@ -11,10 +11,10 @@ import { RegistersService } from 'src/app/shared/services/registers.service';
 })
 export class RegisterFormComponent implements OnInit {
 
-  public form: FormGroup;
+  public form: UntypedFormGroup;
 
   constructor(
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
     private registersService: RegistersService,
     private _snackBar: MatSnackBar,
     private location: Location
