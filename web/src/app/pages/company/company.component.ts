@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-company',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompanyComponent implements OnInit {
 
-  constructor() { }
+  public form: FormGroup;
+
+  constructor(
+    private formBuilder: FormBuilder
+  ) {
+    this.form = this.formBuilder.group({
+      cnpjOfCpf: [null],
+      name: [null],
+      cep: [null]
+    });
+
+
+  }
 
   ngOnInit(): void {
   }
